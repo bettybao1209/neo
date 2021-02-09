@@ -381,7 +381,7 @@ namespace Neo.Ledger
             Context.System.EventStream.Publish(rr);
         }
 
-        private static ImmutableHashSet<UInt160> UpdateExtensibleWitnessWhiteList(ProtocolSettings settings, DataCache snapshot)
+        public static ImmutableHashSet<UInt160> UpdateExtensibleWitnessWhiteList(ProtocolSettings settings, DataCache snapshot)
         {
             uint currentHeight = NativeContract.Ledger.CurrentIndex(snapshot);
             var builder = ImmutableHashSet.CreateBuilder<UInt160>();
